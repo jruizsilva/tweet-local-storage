@@ -1,9 +1,3 @@
-// Variables
-const formulario = document.querySelector("#form");
-const inputTweet = formulario.querySelector("#tweet");
-const listaTweetHTML = document.querySelector("#lista-tweets");
-const btnSubmit = formulario.querySelector("#submit");
-let arrayTweets = [];
 // Functions
 const iniciarApp = () => {
 	resetFormulario();
@@ -69,8 +63,16 @@ const borrarTweet = (e) => {
 };
 const getData = () => {
 	arrayTweets = JSON.parse(localStorage.getItem("tweets"));
-	mostrarTweets();
+	if (localStorage.getItem("tweets")) {
+		mostrarTweets();
+	}
 };
+// Variables
+const formulario = document.querySelector("#form");
+const inputTweet = formulario.querySelector("#tweet");
+const listaTweetHTML = document.querySelector("#lista-tweets");
+const btnSubmit = formulario.querySelector("#submit");
+let arrayTweets = [];
 // Events
 const cargarEventListener = () => {
 	inputTweet.addEventListener("blur", validarTweet);
