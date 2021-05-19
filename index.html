@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Local Storage</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<header class="header">
+			<h1>Local Storage</h1>
+		</header>
+		<main class="main">
+			<form action="" class="form" id="form">
+				<div class="campo">
+					<label for="tweet" class="label">Tweet: </label>
+					<textarea name="tweet" id="tweet" class="tweet normal"></textarea>
+				</div>
+
+				<button type="submit" id="submit" class="submit">Agregar</button>
+			</form>
+			<section class="section">
+				<h2>Mis tweets</h2>
+				<ul class="lista-tweets" id="lista-tweets"></ul>
+			</section>
+		</main>
+		<template id="template-li">
+			<li class="item" id="item">
+				<p class="text-tweet">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				</p>
+				<span class="borrar-item" id="borrar-item">X</span>
+			</li>
+		</template>
+		<script src="js/app.js"></script>
+	</body>
+</html>

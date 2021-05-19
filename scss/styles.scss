@@ -1,0 +1,128 @@
+@import "variables";
+@import "mixins";
+
+html {
+	box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+body {
+	background-color: $light-white;
+}
+// Clases para JS
+.opacity-50 {
+	opacity: 0.5;
+}
+.cursor-not-allowed:hover {
+	cursor: not-allowed;
+}
+.cursor-allowed:hover {
+	cursor: pointer;
+}
+.header {
+	h1 {
+		@include titulo;
+	}
+	margin: 24px 0;
+	@media screen and (min-width: 768px) {
+		margin-top: 32px;
+	}
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	@media screen and (min-width: 768px) {
+		width: 90%;
+		margin: 0 auto;
+		gap: 32px;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	@media screen and (min-width: 1000px) {
+		width: 70%;
+	}
+	.form {
+		width: 90%;
+		margin: 0 auto;
+		margin-bottom: 8px;
+		max-width: 400px;
+		@media screen and (min-width: 768px) {
+			flex-basis: 100%;
+			margin-bottom: 0;
+			max-width: none;
+		}
+		.campo {
+			display: flex;
+			flex-direction: column;
+			.label {
+				font: {
+					size: 18px;
+					family: $fuente;
+					weight: 400;
+				}
+				margin-bottom: 4px;
+			}
+			.tweet {
+				resize: none;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				height: 60px;
+				padding: 8px;
+				outline: none;
+				font-family: $fuente;
+				@media screen and (min-width: 450px) {
+					height: 80px;
+				}
+			}
+			margin-bottom: 10px;
+		}
+		.submit {
+			@include boton;
+		}
+	}
+	.section {
+		width: 90%;
+		margin: 0 auto;
+		max-width: 400px;
+		@media screen and (min-width: 768px) {
+			flex-basis: 100%;
+			margin: 0;
+			max-width: none;
+		}
+		h2 {
+			@include titulo;
+			font-size: 22px;
+			font-weight: 500;
+			@media screen and (min-width: 768px) {
+				margin-top: 0;
+				margin-bottom: 0px;
+			}
+		}
+		.lista-tweets {
+			list-style: none;
+			padding: 0;
+			.item {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 10px;
+				.text-tweet {
+					margin: 0;
+					margin-right: 10px;
+				}
+				.borrar-item {
+					color: $light-red;
+					&:hover {
+						cursor: pointer;
+					}
+				}
+				* {
+					font-family: $fuente;
+				}
+			}
+		}
+	}
+}

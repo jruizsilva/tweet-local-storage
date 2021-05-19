@@ -1,0 +1,204 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-color: #f4f3f3;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.cursor-not-allowed:hover {
+  cursor: not-allowed;
+}
+
+.cursor-allowed:hover {
+  cursor: pointer;
+}
+
+.header {
+  margin: 24px 0;
+}
+
+.header h1 {
+  text-align: center;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    margin-top: 32px;
+  }
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    width: 90%;
+    margin: 0 auto;
+    gap: 32px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main {
+    width: 70%;
+  }
+}
+
+.main .form {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  max-width: 400px;
+}
+
+@media screen and (min-width: 768px) {
+  .main .form {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 0;
+    max-width: none;
+  }
+}
+
+.main .form .campo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.main .form .campo .label {
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.main .form .campo .tweet {
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 60px;
+  padding: 8px;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+}
+
+@media screen and (min-width: 450px) {
+  .main .form .campo .tweet {
+    height: 80px;
+  }
+}
+
+.main .form .submit {
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  background-color: #29a7f0;
+  border: 0;
+  color: white;
+  font-weight: 600;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.main .section {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+@media screen and (min-width: 768px) {
+  .main .section {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.main .section h2 {
+  text-align: center;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .main .section h2 {
+    margin-top: 0;
+    margin-bottom: 0px;
+  }
+}
+
+.main .section .lista-tweets {
+  list-style: none;
+  padding: 0;
+}
+
+.main .section .lista-tweets .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.main .section .lista-tweets .item .text-tweet {
+  margin: 0;
+  margin-right: 10px;
+}
+
+.main .section .lista-tweets .item .borrar-item {
+  color: #c02739;
+}
+
+.main .section .lista-tweets .item .borrar-item:hover {
+  cursor: pointer;
+}
+
+.main .section .lista-tweets .item * {
+  font-family: "Raleway", sans-serif;
+}
+/*# sourceMappingURL=styles.css.map */

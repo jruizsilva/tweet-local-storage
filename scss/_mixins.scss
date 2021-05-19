@@ -1,0 +1,22 @@
+@mixin titulo {
+	text: {
+		align: center;
+	}
+	font: {
+		weight: 400;
+		family: $fuente;
+	}
+}
+@mixin boton {
+	width: 100%;
+	padding: 8px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: $fuente;
+	background-color: $light-blue;
+	border: 0;
+	color: white;
+	font-weight: 600;
+	border-radius: 3px;
+	font-size: 15px;
+}
