@@ -62,8 +62,8 @@ const borrarTweet = (e) => {
 	}
 };
 const getData = () => {
-	arrayTweets = JSON.parse(localStorage.getItem("tweets"));
 	if (localStorage.getItem("tweets")) {
+		arrayTweets = JSON.parse(localStorage.getItem("tweets"));
 		mostrarTweets();
 	}
 };
